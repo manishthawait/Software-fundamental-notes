@@ -1,4 +1,4 @@
-Commands     -	 Meaning
+Command     -	 Meaning
 ls	        -  list files and directories
 ls -a	      -  list all files and directories
 mkdir	      -  make a directory
