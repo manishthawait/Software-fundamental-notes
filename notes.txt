@@ -1,1 +1,10 @@
-
+1) Always use tab for auto completion of any command
+2) Always use double tab to know inside of any folder/directory
+3) Always use arrow buttons for previous commands
+4) To rename a file/directory you can also use mv command 
+5) Source :- full path	
+6) Destination :- full path
+7) Absoute path :-from one directory to another directory (full path) , 
+                  for ex:- ~/manish/workspace/test/
+8) Relative path :-from one directory to another directory (full path) ,
+                   for ex:- ../Desktop/unixstuff/ test/

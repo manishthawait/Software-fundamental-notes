@@ -1,0 +1,21 @@
+12345
+
+
+vim
+
+
+press i to go into insert mode to write any content
+
+After writing content press (esc + :w) to save
+
+To close a file press :q 
+
+to save change and close the file press esc + :wq
+
+ for home 
+ ~
+
+for current directory/
+.
+
+..

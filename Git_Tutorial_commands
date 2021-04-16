@@ -1,0 +1,8 @@
+To commit
+1) first config your user name and email.
+   command :-
+   git config --global user.name "user name"
+   git config --global user.email "email"
+2)create a .git folder
+  command :- 
+  git init

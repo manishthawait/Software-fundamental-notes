@@ -8,3 +8,50 @@
 8)cd .. -  change to parent directory
 9)pwd -  display the path of the current directory
 
+/ is a root directory
+
+cd / 
+for root directory
+  
+
+
+
+ls -l
+to know the date time of making a directory or file
+
+
+ls - al 
+to know the all files inside it and also hidden file
+
+cp file1 file2  
+to copy file1 things into file2
+
+~/.bash_history 
+to know the executed commands 
+
+to create a file 
+touch [file name]
+text editor [file name]
+cd.> file name
+
+cat
+for seeing a file 
+
+
+for home 
+ ~
+
+for current directory/
+.
+
+for coming out of directory we use
+.. and then press tab
+
+absoute path - from one directory to another directory (full path) , 
+               for ex:- ~/manish/workspace/test/
+
+relative path - from one directory to another directory (full path) ,
+                for ex:- ../Desktop/unixstuff/ test/
+
+ 
+
