@@ -5,4 +5,35 @@ To commit
    git config --global user.email "email"
 2)create a .git folder
   command :- 
+ 
   git init
+  
+  then, check git status
+  command:- 
+  
+  git status
+  
+  then you have to add file
+  for all the file in current directory :- git add .
+  for a particular file :- git add file name
+  
+  then again check git status as earlier(optional)
+  
+  then you have to commit 
+  command:- 
+  
+  git commit -m "write a short message"
+  
+  then again check git status as earlier(optional)
+  
+  git remote add origin (copy link)
+  then you have to clone the link(copy the link from the folder in which you want to copy from git hub )
+  
+  git remote -v 
+  
+  then you can push
+  command:- 
+  
+  git push -u origin master
+  
+  
