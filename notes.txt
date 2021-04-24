@@ -1,4 +1,4 @@
-1) Always use tab for auto completion of any command
+								1) Always use tab for auto completion of any command
 2) Always use double tab to know inside of any folder/directory
 3) Always use arrow buttons for previous commands
 4) To rename a file/directory you can also use mv command 
