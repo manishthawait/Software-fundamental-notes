@@ -15,7 +15,10 @@ To commit
   
   then you have to add file
   for all the file in current directory :- git add .
-  for a particular file :- git add file name
+  for a particular file
+  command:- 
+  
+  git add file name
   
   then again check git status as earlier(optional)
   
