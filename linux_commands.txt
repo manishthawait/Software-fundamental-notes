@@ -8,10 +8,15 @@ cd - change to home-directory
 cd ~ -  change to home-directory
 cd .. -  change to parent directory
 pwd -  display the path of the current directory
-cp file1 file2 - copy file1 and call it file2
+cp <file1> <file2> - copy file1 and call it file2
+cp <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M 
+cp <*> <destination> - for multiple files
 mv file1 file2 - move or rename file1 to file2
-rm file - remove a file
-rmdir directory - remove a directory
+mv <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M (M is a directory)
+mv <*> <destination> - for multiple files in a directory
+rm file - remove a file 
+rmdir directory - remove a empty directory
+rm -R filename - deleting all files and directories recurssively
 cat file - display a file
 less file - display a file a page at a time (space-bar for next lines , q for quit),(to find any specific word - /word, to search next word type  n ) 
 head file - display the first few lines of a file
@@ -45,6 +50,7 @@ fg %1 - foreground job number 1
 kill %1	- kill job number 1
 ps - list current processes
 kill 26152 - kill process number 26152
+
 
 
 / is a root directory
