@@ -25,6 +25,11 @@ grep 'keyword' file - search a file for keywords
 wc file - count number of lines/words/characters in file (wc -w file - for number of words in a file , wc -l file - for number of lines in a file )
 command > file - redirect standard output to a file
 (for ex:- cat > file )
+(for ex:- echo -e "abc \npqr \nxyz "> file )    we use -e for usage of backlash escapes and \n for new line
+output for this command:- file created
+abc
+pqr
+xyz
 command >> file - append(edit) standard output to a file
 (for ex:- cat >> file)
 command < file - redirect standard input from a file
