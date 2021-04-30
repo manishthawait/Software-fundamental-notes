@@ -1,3 +1,68 @@
+
+shell prompt - $
+ 
+all commands will be written in lower case single word
+
+$ command-name [arguments]
+    arguments can be options  ex:-(ls -al)
+     or 
+    name of files or directories ex:-(ls directory)
+    or 
+    both ex:- (ls -al directory)
+
+seperating the command in next line by using \backlash and then with this sign > on next line command will prompt to finish the command
+
+Entering several commands with semicolon(;) . It will be executed in sequence
+ex:- date; who; ls -al
+
+when you ls -al to a directory there are .files which contains configuaration file
+
+redirection operators > , >> , <
+
+wildcards * , ? , [] 
+
+ Globbing
+   process of pattern matching with wildcards is globbing
+
+   also called filename substitution or filename expansion
+
+   wildcards also called globs 
+
+
+* - matches any combination of zero or more characters
+    for ex:-
+     k* k followed by zero or any number of characters.    k , kk , k211 , kajshsh  , k11hjch322
+     k*p k followed by zero or any number of characters, followed by p.      kp , kahgsgp , k1424ddp , kh2hk44kp
+ 
+? - matches exactly one character
+    for ex:-
+     k?  k followed by any single character.    ka , k1 , k. , k3
+     ?k  single character followed by k.        1k , sk , dk , 0k
+     k?p k followed by any single character followed by p.   kap , k1p , k0p 
+     chapter?? chapter followed by 2 character.    chapter23 , chapterXX , chapter01
+     ??? filenames with 3 characters only
+     ???* filenames with 3 or more characters
+
+[] - character class 
+     for ex:- 
+      five characters filenames that begin with poem and end with A,B,C,D,E               poem[ABCDE]
+      filesnames that start with letter from a to k and end with a digit                  [a-k]*[0-9]
+      filesnames that start with letter from a to k or u to z and end with a digit        [a-ku-z]*[0-9]
+      filenames that don't start with an x,y,z         [!xyz]*
+      filenames that don't start with a digit          [!0-9]*
+
+
+   
+  Named character classes 
+  
+  [[:lower:]]    matches lower case letters 
+  [[:upper:]]    matches upper case letters 
+  [[:alpha:]]    matches both lower and upper case letter 
+  [[:digit:]]    matches digits
+  [[:alnum:]]    matches lowercase , uppercase and digits
+  [[:space:]]    matches whitespace characters like spaces, tabs , newlines
+
+
 1) Always use tab for auto completion of any command
 2) Always use double tab to know inside of any folder/directory
 3) Always use arrow buttons for previous commands

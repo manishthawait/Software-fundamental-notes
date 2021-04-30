@@ -1,28 +1,50 @@
 Command -   Meaning
 
-ls -  list files and directories
-ls -a -  list all files and directories
-mkdir -  make a directory
-cd directory -  change to named directory
+. - current directory
+.. - parent directory
+ls file-name -  list files and directories
+ls -a file-name -  list all files and directories. We can ls multiple file-names 
+ls -ltr file-name - list all files and directories, l for listing, t type of file, r will show reverse order while sorting that means oldest file show first.
+mkdir directory-name-  make a directory
+we can also make tree structure with mkdir. for ex:- (mkdir a1 a1/a1A a1/a1B a1/a1C) by this command a1A a1B a1C will be created inside a1
+ex:- (mkdir -p a/b/c/d) by this command d will inside c, c will be inside b, b will be inside a
+cd directory-name -  change to named directory
 cd - change to home-directory
 cd ~ -  change to home-directory
 cd .. -  change to parent directory
+cd -  - previous working directory
 pwd -  display the path of the current directory
+clear - clear the screen
+whatis command - brief description of a command
+man command - read the online manual page for a command
+command --help -  help page displays options for the command
+cal - displays the calender of current month
+ex:-(cal 02 2010 will show february of 2010) , (cal 2010 will show full year calender of 2010) 
+date - displays current date time
+file file-name - displays file type of a file
 cp <file1> <file2> - copy file1 and call it file2
 cp <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M 
 cp <*> <destination> - for multiple files
+cp <files> <directory> - can copy files into directory
+cp -r <source directory> <destination directory> - it allows to copy entire directory structure recursively
 mv file1 file2 - move or rename file1 to file2
+mv directory1 directory2 - move or rename directory1(it should be empty directory) to directory2
+mv <file or files> <directory> - moving file or files in a directory
 mv <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M (M is a directory)
 mv <*> <destination> - for multiple files in a directory
 rm file - remove a file 
-rmdir directory - remove a empty directory
-rm -R filename - deleting all files and directories recurssively
-cat file - display a file
-less file - display a file a page at a time (space-bar for next lines , q for quit),(to find any specific word - /word, to search next word type  n ) 
-head file - display the first few lines of a file
-tail file - display the last few lines of a file
+rmdir directory - remove only empty directory
+rm -r filename - deleting all files and directories recurssively(including directory having files)
+rm -i filename - it will prompt yes or no whether to delete or not , in other language it will take your confirmation
+touch file-name - empty file creation. we can create multiple files also. for ex:- touch file1 file2 file3 and it can be also written as absolute and relative path
+more file-name - display a file a page at a time (space-bar for next page and enter for next lines , you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, to search next word type  n ) 
+less file-name - display a file a page at a time (space-bar for next page and enter for next lines ,  you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, you can also use up and down arrow keys for up down , to search next word type  n ) 
+head file-name - display the first few lines of a file
+for ex:- (head -n 5 file-name) this will show first 5 lines of a file. n is number of line
+tail file-name - display the last few lines of a file
+for ex:- (tail -n 8 file-name) this will show last 8 lines of a file. n is number of line
 grep 'keyword' file - search a file for keywords
-wc file - count number of lines/words/characters in file (wc -w file - for number of words in a file , wc -l file - for number of lines in a file )
+wc file-name - count number of lines/words/characters in file (wc -w file - for number of words in a file , wc -l file - for number of lines in a file )
 command > file - redirect standard output to a file
 (for ex:- cat > file )
 (for ex:- echo -e "abc \npqr \nxyz "> file )    we use -e for usage of backlash escapes and \n for new line
@@ -39,10 +61,9 @@ command1 | command2 - pipe the output of command1 to the input of command2
 cat file1 file2 > file0 - concatenate(merge) file1 and file2 to file0
 sort - sort data(arrange)
 who - list users currently logged in
+whoami - displays the username of the user who runs the command
 * - match any number of characters
 ? - match one character
-man command - read the online manual page for a command
-whatis command - brief description of a command
 apropos keyword - match commands with keyword in their man pages
 ls - lag	list access rights for all files
 chmod [options] file - change access rights for named file
