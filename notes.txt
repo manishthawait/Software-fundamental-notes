@@ -63,6 +63,33 @@ wildcards * , ? , []
   [[:space:]]    matches whitespace characters like spaces, tabs , newlines
 
 
+
+  Instead of copying the file we cn create links.
+   
+    there are two types of link :- hard link , soft or symbolic link 
+   
+  Hard link :- it is simply  giving multiple names to physical file. it is only created in local file system.
+               we cannot create hard links for directories.		
+               If you need to remove a file you need to erase all its hard links.
+               command :- ln filename linkname
+
+               Regarding link creation , hardlink
+                when there is a already a file exist which has a similar name of your provided linkname
+                then the terminal shows error in that case you have two commands for creation of a linkname.
+
+                1) create link by force, this will create a link with same name but will override the 
+                   previous/existing file. 
+                   command :-  ln -f filename linkname
+
+                2) but if don't want you to delete or override existing file with a same file name then you 
+                   can you use backup command this will create a backup file. 
+                   command :- ln --backup filename linkname   
+
+  Symbolic link :- It is a physical file pointing to another file in a directory structure. It can be created 
+                   in across different file system. we can create symbolic links for directories.You can remove symbolic links it didn't affect the actual file but if you delete the actual  file then there is no use of symbolic link as symbolic link redirects the actual file and when you delete the actual file it will redirect a non existing file.
+                   command :- ln -s filename linkname
+
+
 1) Always use tab for auto completion of any command
 2) Always use double tab to know inside of any folder/directory
 3) Always use arrow buttons for previous commands

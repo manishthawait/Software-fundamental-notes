@@ -15,6 +15,7 @@ cd .. -  change to parent directory
 cd -  - previous working directory
 pwd -  display the path of the current directory
 clear - clear the screen
+find ~ -inum ------   - to find any file by its inode number. ------ is for inode number. 
 whatis command - brief description of a command
 man command - read the online manual page for a command
 command --help -  help page displays options for the command
@@ -35,7 +36,7 @@ mv <*> <destination> - for multiple files in a directory
 rm file - remove a file 
 rmdir directory - remove only empty directory
 rm -r filename - deleting all files and directories recurssively(including directory having files)
-rm -i filename - it will prompt yes or no whether to delete or not , in other language it will take your confirmation
+rm -i filename - it will prompt yes or no whether to delete or not , in other language it will take your confirmation. i is for interactive option.
 touch file-name - empty file creation. we can create multiple files also. for ex:- touch file1 file2 file3 and it can be also written as absolute and relative path
 more file-name - display a file a page at a time (space-bar for next page and enter for next lines , you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, to search next word type  n ) 
 less file-name - display a file a page at a time (space-bar for next page and enter for next lines ,  you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, you can also use up and down arrow keys for up down , to search next word type  n ) 
@@ -59,7 +60,59 @@ command < file - redirect standard input from a file
 command1 | command2 - pipe the output of command1 to the input of command2
 (for ex:- cat file1 file2 file3 | grep -a | sort)this commands means you want display file 1,2,3 with containing letter "a" and in arranging order.
 cat file1 file2 > file0 - concatenate(merge) file1 and file2 to file0
-sort - sort data(arrange)
+cmp file1 file2 - comparison of two file. if similar then shell prompts if not then differ line prompts.
+cmp -l file1 file2 - for listing the comparison
+sdiff file1 file2 - displays both file in terminal with differences.
+comm sortedfile1 sortedfile 2 - this is used for comparison of two sorted files it tells what is common in this file and what is unique in this files. This command displays the output in three columns 
+ in first column - displays lines that are unique to first file
+ in second column - displays lines unique to second file
+ in third column - displays column to both files
+
+ if you didn't want any column to display then , for ex:- you don't want the third column
+                                                  command - comm -3 sortedfile1 sortedfile 2
+ if you didn't want any column to display then , for ex:- you don't want the second and third column
+                                                  command - comm -23 sortedfile1 sortedfile 2
+ 
+cut - Extracting columns or feilds of data from a file
+
+  1) extracting columns using cut 
+   i) option -c
+      cut -c6 filename - extract 6th column of file
+      cut -c2,5,8 filename - extract 2,5,8th column of file
+      cut -c10-20 filename - extract 10 to 20th column of file
+      cut -c10-20,30-40 filename - extract 10 to 20th and 30 to 40th column of file
+      cut -c10-20,30-40,45- filename - extract 10 to 20th and 30 to 40th and 45th to the end of column of file
+  2) extracting feilds using cut (having delimiters or space)
+       delimiters #-:|    
+       In termnial space means tab
+   i) option -f - followed by field number to extract
+   ii) option -d - field delimiter used in file
+
+      cut -d ':' -f1 filename - extract first field ,: is delimiter
+      cut -d '#' -f2-5,6-8 filename - extract field 2 to 5 and 6 to 8,# is delimiter
+      cut -f1-6 filename - extract 1 to 6th field, if you don't specify -d ,then tab is the delimiter
+      cut -d':' -f1,2 filename --output delimiter="##" - extracting first and second field with changing the delimiter to ##
+
+paste - This command is used to join files vertically
+    paste file1 file2 file3 - paste file 1,2 and 3 or we can say all three files are joined vertically
+    paste -d'|' f1.txt f2.txt f3.txt - we can say all three files are joined vertically with a delimiter '|'
+    -s    paste together lines from the same line or we can say paste line vertically to horizontally
+
+     for ex:- paste -s file1    or   paste -s -d'|' file1
+       both are same command one is without delimiter and the other is with delimiter
+
+sort filename - sort data(arrange)
+  options :- 
+    -n    sort according to numerical value
+    -r    reverse the order
+    -o    write the sorted output to a file
+    -u    remove duplicate lines
+    -c    check whether the file is sorted, if not sorted error will come if sorted then it will prompt again
+    -m    merges sorted files 
+    -M    sorts on months
+    -k n   start sort on nth field
+    -t"char"  use char as the field delimiter 
+    
 who - list users currently logged in
 whoami - displays the username of the user who runs the command
 * - match any number of characters
@@ -76,6 +129,7 @@ fg %1 - foreground job number 1
 kill %1	- kill job number 1
 ps - list current processes
 kill 26152 - kill process number 26152
+
 
 
 
