@@ -1,108 +1,304 @@
-Command -   Meaning
+Linux Commands
+---------------
+----------------
 
-. - current directory
-.. - parent directory
-ls file-name -  list files and directories
-ls -a file-name -  list all files and directories. We can ls multiple file-names 
-ls -ltr file-name - list all files and directories, l for listing, t type of file, r will show reverse order while sorting that means oldest file show first.
-mkdir directory-name-  make a directory
-we can also make tree structure with mkdir. for ex:- (mkdir a1 a1/a1A a1/a1B a1/a1C) by this command a1A a1B a1C will be created inside a1
+. 
+Current directory
+
+.. 
+Parent directory
+
+/ 
+is a root directory
+
+cd / 
+For root directory
+
+~/.bash_history 
+To know the executed commands 
+
+To create a file :-
+touch [file name]
+text editor [file name]
+cd.> file name
+
+cat
+For seeing a file 
+
+~
+For home 
+
+Absoute path - From one directory to another directory (full path) , 
+               for ex:- ~/manish/workspace/test/
+
+Relative path - From one directory to another directory (full path) ,
+                for ex:- ../Desktop/unixstuff/ test/
+
+
+-----------ls command
+
+ls file-name
+List files and directories
+
+ls -l
+To know the date time of making a directory or file
+
+ls - al 
+To know the all files inside it and also hidden file
+
+ls -a file-name
+List all files and directories. We can ls multiple file-names 
+
+ls -ltr file-name
+List all files and directories, l for listing, t type of file, r will show reverse order while sorting that means oldest file show first.
+
+ls - lag
+List access rights for all files
+
+-------------
+
+mkdir directory-name
+Make a directory
+We can also make tree structure with mkdir. for ex:- (mkdir a1 a1/a1A a1/a1B a1/a1C) by this command a1A a1B a1C will be created inside a1
 ex:- (mkdir -p a/b/c/d) by this command d will inside c, c will be inside b, b will be inside a
-cd directory-name -  change to named directory
-cd - change to home-directory
-cd ~ -  change to home-directory
-cd .. -  change to parent directory
-cd -  - previous working directory
-pwd -  display the path of the current directory
-clear - clear the screen
-find ~ -inum ------   - to find any file by its inode number. ------ is for inode number. 
-whatis command - brief description of a command
-man command - read the online manual page for a command
-command --help -  help page displays options for the command
-cal - displays the calender of current month
+
+cd directory-name
+Change to named directory
+
+cd
+Change to home-directory
+
+cd ~
+Change to home-directory
+
+cd ..
+Change to parent directory
+
+cd -
+Previous working directory
+
+pwd
+Display the path of the current directory
+
+clear
+Clear the screen
+
+find ~ -inum ------
+To find any file by its inode number. ------ this is a six digit inode number. 
+
+---------------------------For help
+
+whatis command
+Brief description of a command
+
+man command
+Read the online manual page for a command
+
+command --help
+Help page displays options for the command
+
+------------------------------
+
+cal
+Displays the calender of current month
 ex:-(cal 02 2010 will show february of 2010) , (cal 2010 will show full year calender of 2010) 
-date - displays current date time
-file file-name - displays file type of a file
-cp <file1> <file2> - copy file1 and call it file2
-cp <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M 
-cp <*> <destination> - for multiple files
-cp <files> <directory> - can copy files into directory
-cp -r <source directory> <destination directory> - it allows to copy entire directory structure recursively
-mv file1 file2 - move or rename file1 to file2
-mv directory1 directory2 - move or rename directory1(it should be empty directory) to directory2
-mv <file or files> <directory> - moving file or files in a directory
-mv <A> <B> <C> <D> <E> <M> - copy A,B,C,D,E into M (M is a directory)
-mv <*> <destination> - for multiple files in a directory
-rm file - remove a file 
-rmdir directory - remove only empty directory
-rm -r filename - deleting all files and directories recurssively(including directory having files)
-rm -i filename - it will prompt yes or no whether to delete or not , in other language it will take your confirmation. i is for interactive option.
-touch file-name - empty file creation. we can create multiple files also. for ex:- touch file1 file2 file3 and it can be also written as absolute and relative path
-more file-name - display a file a page at a time (space-bar for next page and enter for next lines , you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, to search next word type  n ) 
-less file-name - display a file a page at a time (space-bar for next page and enter for next lines ,  you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, you can also use up and down arrow keys for up down , to search next word type  n ) 
-head file-name - display the first few lines of a file
+
+date
+Displays current date time
+
+file file-name
+Displays file type of a file
+
+-----------------------------Copy command
+
+cp <file1> <file2>
+Copy file1 and call it file2
+
+cp <A> <B> <C> <D> <E> <M>
+Copy A,B,C,D,E into M 
+
+cp <*> <destination>
+For multiple files
+
+cp <files> <directory>
+Can copy files into directory
+
+cp -r <source directory> <destination directory>
+It allows to copy entire directory structure recursively
+
+-----------------------------Move command
+
+mv file1 file2
+Move or rename file1 to file2
+
+mv directory1 directory2
+Move or rename directory1(it should be empty directory) to directory2
+
+mv <file or files> <directory>
+Moving file or files in a directory
+
+mv <A> <B> <C> <D> <E> <M>
+Copy A,B,C,D,E into M (M is a directory)
+
+mv <*> <destination>
+For multiple files in a directory
+
+-------------------------------Remove command
+
+rm file
+Remove a file 
+
+rmdir directory
+Remove only empty directory
+
+rm -r filename
+Deleting all files and directories recurssively(including directory having files)
+
+rm -i filename
+It will prompt yes or no whether to delete or not , in other language it will take your confirmation. i is for interactive option.
+
+--------------------------------
+
+touch file-name
+Empty file creation. we can create multiple files also. for ex:- touch file1 file2 file3 and it can be also written as absolute and relative path
+
+-------------------------------------------------------------Command used for large content files
+
+more file-name
+Display a file a page at a time (space-bar for next page and enter for next lines , you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, to search next word type  n ) 
+
+less file-name
+Display a file a page at a time (space-bar for next page and enter for next lines ,  you can also use f for forward and b for back , you can type h for help command , q for quit),(to find any specific word - /word, you can also use up and down arrow keys for up down , to search next word type  n ) 
+
+head file-name
+Display the first few lines of a file
 for ex:- (head -n 5 file-name) this will show first 5 lines of a file. n is number of line
-tail file-name - display the last few lines of a file
+
+tail file-name
+Display the last few lines of a file
 for ex:- (tail -n 8 file-name) this will show last 8 lines of a file. n is number of line
-grep 'keyword' file - search a file for keywords
-wc file-name - count number of lines/words/characters in file (wc -w file - for number of words in a file , wc -l file - for number of lines in a file )
-command > file - redirect standard output to a file
+
+grep 'keyword' file
+Search a file for keywords
+
+wc file-name
+Count number of lines/words/characters in file (wc -w file - for number of words in a file , wc -l file - for number of lines in a file )
+
+-------------------------------------------------------------
+
+command > file
+Redirect standard output to a file
 (for ex:- cat > file )
 (for ex:- echo -e "abc \npqr \nxyz "> file )    we use -e for usage of backlash escapes and \n for new line
-output for this command:- file created
+Output for this command:- file created
 abc
 pqr
 xyz
-command >> file - append(edit) standard output to a file
+
+command >> file
+Append(edit) standard output to a file
 (for ex:- cat >> file)
-command < file - redirect standard input from a file
+
+command < file
+Redirect standard input from a file
 (for ex:- sort < file )
-command1 | command2 - pipe the output of command1 to the input of command2
+
+command1 | command2
+Pipe the output of command1 to the input of command2
 (for ex:- cat file1 file2 file3 | grep -a | sort)this commands means you want display file 1,2,3 with containing letter "a" and in arranging order.
-cat file1 file2 > file0 - concatenate(merge) file1 and file2 to file0
-cmp file1 file2 - comparison of two file. if similar then shell prompts if not then differ line prompts.
-cmp -l file1 file2 - for listing the comparison
-sdiff file1 file2 - displays both file in terminal with differences.
-comm sortedfile1 sortedfile 2 - this is used for comparison of two sorted files it tells what is common in this file and what is unique in this files. This command displays the output in three columns 
+
+cat file1 file2 > file0
+Concatenate(merge) file1 and file2 to file0
+
+cmp file1 file2
+Comparison of two file. if similar then shell prompts if not then differ line prompts.
+
+cmp -l file1 file2
+For listing the comparison
+
+sdiff file1 file2
+Displays both file in terminal with differences.
+
+----------------------------------------------------------------------------------------------------------
+
+comm sortedfile1 sortedfile 2
+This is used for comparison of two sorted files it tells what is common in this file and what is unique in this files. This command displays the output in three columns 
  in first column - displays lines that are unique to first file
  in second column - displays lines unique to second file
  in third column - displays column to both files
 
- if you didn't want any column to display then , for ex:- you don't want the third column
+ If you didn't want any column to display then , for ex:- you don't want the third column
                                                   command - comm -3 sortedfile1 sortedfile 2
- if you didn't want any column to display then , for ex:- you don't want the second and third column
+ If you didn't want any column to display then , for ex:- you don't want the second and third column
                                                   command - comm -23 sortedfile1 sortedfile 2
+
+------------------------------------------------------------------------------------------------------------
  
-cut - Extracting columns or feilds of data from a file
+cut
+Extracting columns or feilds of data from a file
 
-  1) extracting columns using cut 
-   i) option -c
-      cut -c6 filename - extract 6th column of file
-      cut -c2,5,8 filename - extract 2,5,8th column of file
-      cut -c10-20 filename - extract 10 to 20th column of file
-      cut -c10-20,30-40 filename - extract 10 to 20th and 30 to 40th column of file
-      cut -c10-20,30-40,45- filename - extract 10 to 20th and 30 to 40th and 45th to the end of column of file
-  2) extracting feilds using cut (having delimiters or space)
-       delimiters #-:|    
+  1) Extracting columns using cut 
+   i) Option -c
+      
+      cut -c6 filename
+      Extract 6th column of file
+      
+      cut -c2,5,8 filename
+      Extract 2,5,8th column of file
+      
+      cut -c10-20 filename
+      Extract 10 to 20th column of file
+      
+      cut -c10-20,30-40 filename
+      Extract 10 to 20th and 30 to 40th column of file
+      
+      cut -c10-20,30-40,45- filename
+      Extract 10 to 20th and 30 to 40th and 45th to the end of column of file
+  
+  2) Extracting feilds using cut (having delimiters or space)
+       Delimiters #-:|    
        In termnial space means tab
-   i) option -f - followed by field number to extract
-   ii) option -d - field delimiter used in file
+   
+   i) Option -f
+      Followed by field number to extract
+   
+   ii) Option -d
+       Field delimiter used in file
 
-      cut -d ':' -f1 filename - extract first field ,: is delimiter
-      cut -d '#' -f2-5,6-8 filename - extract field 2 to 5 and 6 to 8,# is delimiter
-      cut -f1-6 filename - extract 1 to 6th field, if you don't specify -d ,then tab is the delimiter
-      cut -d':' -f1,2 filename --output delimiter="##" - extracting first and second field with changing the delimiter to ##
+      cut -d ':' -f1 filename
+      Extract first field ,: is delimiter
 
-paste - This command is used to join files vertically
-    paste file1 file2 file3 - paste file 1,2 and 3 or we can say all three files are joined vertically
-    paste -d'|' f1.txt f2.txt f3.txt - we can say all three files are joined vertically with a delimiter '|'
-    -s    paste together lines from the same line or we can say paste line vertically to horizontally
+      cut -d '#' -f2-5,6-8 filename
+      Extract field 2 to 5 and 6 to 8,# is delimiter
+      
+      cut -f1-6 filename
+      Extract 1 to 6th field, if you don't specify -d ,then tab is the delimiter
+      
+      cut -d':' -f1,2 filename --output delimiter="##"
+      Extracting first and second field with changing the delimiter to ##
+
+------------------------------------------------------------------------------------------------------------
+
+paste
+This command is used to join files vertically
+  
+    paste file1 file2 file3
+    Paste file 1,2 and 3 or we can say all three files are joined vertically
+    
+    paste -d'|' f1.txt f2.txt f3.txt
+    We can say all three files are joined vertically with a delimiter '|'
+    
+    -s    Paste together lines from the same line or we can say paste line vertically to horizontally
 
      for ex:- paste -s file1    or   paste -s -d'|' file1
-       both are same command one is without delimiter and the other is with delimiter
+       Both are same command one is without delimiter and the other is with delimiter
 
-sort filename - sort data(arrange)
-  options :- 
+------------------------------------------------------------------------------------------------------------
+
+sort filename
+Sort data(arrange)
+
+  Options :- 
     -n    sort according to numerical value
     -r    reverse the order
     -o    write the sorted output to a file
@@ -112,71 +308,61 @@ sort filename - sort data(arrange)
     -M    sorts on months
     -k n   start sort on nth field
     -t"char"  use char as the field delimiter 
+
+-------------------------------------------------------------------------------------------------------------
     
-who - list users currently logged in
-whoami - displays the username of the user who runs the command
-* - match any number of characters
-? - match one character
-apropos keyword - match commands with keyword in their man pages
-ls - lag	list access rights for all files
-chmod [options] file - change access rights for named file
-command & - run command in background
-^C - kill the job running in the foreground
-^Z - suspend the job running in the foreground
-bg - background the suspended job
-jobs - list current jobs
-fg %1 - foreground job number 1
-kill %1	- kill job number 1
-ps - list current processes
-kill 26152 - kill process number 26152
+who
+List users currently logged in
+
+whoami
+Displays the username of the user who runs the command
+
+*
+Match any number of characters
+
+?
+Match one character
+
+apropos keyword
+Match commands with keyword in their man pages
+
+--------------------------------- Permission commands and Job related processes
+
+ls - lag
+List access rights for all files
 
 
+chmod [options] file
+Change access rights for named file
 
+command &
+Run command in background
 
-/ is a root directory
+^C
+Kill the job running in the foreground
 
-cd / 
-for root directory
-  
+^Z
+Suspend the job running in the foreground
 
+bg
+Background the suspended job
 
+jobs
+List current jobs
 
-ls -l
-to know the date time of making a directory or file
+fg %1
+Foreground job number 1
 
+kill %1
+Kill job number 1
 
-ls - al 
-to know the all files inside it and also hidden file
+ps
+List current processes
 
-cp file1 file2  
-to copy file1 things into file2
+kill 26152
+kill process number 26152
 
-~/.bash_history 
-to know the executed commands 
+-----------------------------------
 
-to create a file 
-touch [file name]
-text editor [file name]
-cd.> file name
-
-cat
-for seeing a file 
-
-
-for home 
- ~
-
-for current directory/
-.
-
-for coming out of directory we use
-.. and then press tab
-
-absoute path - from one directory to another directory (full path) , 
-               for ex:- ~/manish/workspace/test/
-
-relative path - from one directory to another directory (full path) ,
-                for ex:- ../Desktop/unixstuff/ test/
-
- 
-
+------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
