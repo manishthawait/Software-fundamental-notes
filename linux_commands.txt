@@ -2,6 +2,8 @@ Linux Commands
 ---------------
 ----------------
 
+cd
+Change directory
 . 
 Current directory
 
