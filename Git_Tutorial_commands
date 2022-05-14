@@ -30,11 +30,9 @@ To commit
  
  
 6) git remote add origin <git-repo-link>
-
  
 7) git remote -v
  
 8) Then you can push
   
    git push -u origin master
-
